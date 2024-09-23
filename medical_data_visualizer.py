@@ -29,12 +29,12 @@ def draw_cat_plot():
 
 
     # 7
-    graph = sns.catplot(x='variable', hue='value', col='cardio', data=df_cat, kind='count')
+    graph = sns.catplot(x='variable', y='total', hue='value', col='cardio', data=df_cat, kind='bar')
 
 
     # 8
     graph.set_axis_labels("variable", "total")
-    fig = graph.fig
+    fig = graph.figure
 
     # 9
     fig.savefig('catplot.png')
